@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-/*
-  * Flexible() : flex와 비슷
-    : 전체에서 ?% 자리차지 같은것을 사용할 때 편리
-      (Row(), Column()과 같이 사용)
-  * Expanded() : Flexible과 유사
-    : 나머지 부분을 다 자리차지
- */
+
 void main() {
   runApp(const MyApp());
 }
@@ -25,26 +19,18 @@ class MyApp extends StatelessWidget {
               Icon(Icons.menu),
               Icon(Icons.notification_add)
             ],
-          ), 
-          /*body: Column(
-            children: [
-              Flexible(child: Container(color: Colors.amber,), flex: 5,),
-              Flexible(child: Container(color: Colors.black26,), flex: 7,),
-              Flexible(child: Container(color: Colors.purpleAccent), flex: 7,)
-            ],
-          )*/
-        //
+          ),
           body: Container(
             padding: EdgeInsets.all(10),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Flexible(child:
-                  Image.asset(
-                    'assets/images/Aston Martin DB11 1.jpg', width: 190),
-                  flex: 3,
+                Image.asset(
+                  'assets/images/Aston Martin DB11 1.jpg',
+                  width: 190,
+                  // fit: BoxFit.cover,
                 ),
-
+                SizedBox(width: 15),
                 SizedBox(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
